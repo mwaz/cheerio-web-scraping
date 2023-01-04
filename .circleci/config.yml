@@ -1,0 +1,8 @@
+version: '2.1' # Use 2.1 to make use of new features.
+orbs: # An orb is a reusable package of CircleCI configuration that 
+# you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
+  node: circleci/node@5.0.3 # This is the latest version of the node orb.
+workflows: # A workflow is a dependency graph of jobs.
+  test: # This workflow contains a single job called "test"
+    jobs:
+      - node/test # This is the test job defined in the node orb.
